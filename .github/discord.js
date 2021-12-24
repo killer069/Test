@@ -22,14 +22,13 @@ else if(!bot_token) {
 (async() => {
     const body_args = body.replaceAll('\r', '').split('- [x]')
     body_args.shift()
-    body_args.unshift('Change Log :-\n')
-    const description = body_args.join('<a:tick:923822869216129104>')
+    body_args.unshift('**Change Log** :-\n')
+    const description = body_args.join('\n<a:tick:923822869216129104>')
     const embed = {
         title : tag,
         url : `https://github.com/play-dl/play-dl/releases/tag/${tag}`,
-        type : "rich",
         description : description,
-        color : 0xBFFF00
+        color : 0x00FF00
     }
 
     const payload = {
