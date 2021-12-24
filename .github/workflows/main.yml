@@ -11,9 +11,6 @@ jobs:
         with:
           node-version: 16
           registry-url: 'https://registry.npmjs.org'
-          
-      - name: Install Dependencies
-        run: npm install
         
       - name: Publish on discord
         run: node .github/discord.js channel="828881761072709639" body="${{ github.event.release.body }}" tag="${{ github.event.release.tag_name }}"
