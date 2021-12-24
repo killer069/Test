@@ -40,7 +40,8 @@ else if(!bot_token) {
 
     const x = await https_getter(`https://discord.com/api/v9/channels/${channel}/messages`, {
         headers : {
-            "Authorization" : `Bot ${bot_token}`
+            "Authorization" : `Bot ${bot_token}`,
+            "content-type" : "application/json"
         },
         method : "POST",
         body : JSON.stringify(payload)
