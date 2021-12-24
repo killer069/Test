@@ -15,4 +15,4 @@ jobs:
       - name: Publish on discord
         run: node .github/discord.js channel="828881761072709639" body="${{ github.event.release.body }}" tag="${{ github.event.release.tag_name }}"
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.BOT_TOKEN }}
+          BOT_TOKEN: ${{ secrets.BOT_TOKEN }}
