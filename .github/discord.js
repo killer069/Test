@@ -27,6 +27,7 @@ else if(!bot_token) {
     const embed = {
         title : tag,
         url : `https://github.com/play-dl/play-dl/releases/tag/${tag}`,
+        type : "rich",
         description : description,
         color : 0xBFFF00
     }
