@@ -34,6 +34,8 @@ else if(!bot_token) {
     const payload = {
         embeds : [embed]
     }
+    
+    console.log(payload)
 
     const x = await https_getter(`https://discord.com/api/v9/channels/${channel}/messages`, {
         headers : {
